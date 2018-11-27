@@ -4,6 +4,7 @@ public class JackOLantern {
     public JackOLantern (String[][] face){
         this.face = face;
     }
+
     public void fill(String str){
         for(int i =0; i< face.length; i++){
             for(int j = 0; j<face[i].length; j++){
@@ -14,6 +15,19 @@ public class JackOLantern {
 
     public void edit (String str,int row, int column){
         face[row][column] = str;
+    }
+
+    public String toString(){
+        String JoL = "";
+
+        for ( int i = 0; i<face.length; i++){
+            for (int j= 0; j< face[i].length;j++){
+                JoL = JoL + face[i][j];
+            }
+            JoL = JoL + "\n";
+        }
+
+        return JoL;
     }
 }
 
